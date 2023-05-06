@@ -1,0 +1,66 @@
+SubProceso  suma ( n1,n2 )
+	Escribir "La suma de los enteros ingresados es: ",n1+n2;
+FinSubProceso
+SubProceso  resta ( n1,n2 )
+	Escribir "La resta de los enteros ingresados es: ",n1-n2;
+FinSubProceso
+
+SubProceso  multiplicacion ( n1,n2 )
+	Escribir "La multiplicacion de los enteros ingresados es: ",n1*n2;
+FinSubProceso
+SubProceso  division ( n1,n2 )
+	si n2=0 Entonces
+		Escribir "La division dentro de 0 no existe";
+	SiNo
+		Escribir "La division de los enteros ingresados es: ",n1/n2;
+	FinSi
+	
+FinSubProceso
+Proceso operacionesAritmeticas
+	definir opcion,num1,num2 Como Entero;
+	
+	
+	opcion<- 0;
+	Mientras opcion<>5 Hacer
+		Escribir "Menú";
+		Escribir "1. Suma";
+		Escribir "2. Resta";
+		Escribir "3. Multiplicación";
+		Escribir "4. División";
+		Leer opcion;
+		Segun opcion Hacer
+			1:
+				Escribir "suma";
+				Escribir "Ingrese valor 1";
+				Leer num1;
+				Escribir "Ingrese valor 2";
+				Leer num2;
+				suma(num1,num2);
+			2:
+				Escribir "Resta";
+				Escribir "Ingrese valor 1";
+				Leer num1;
+				Escribir "Ingrese valor 2";
+				Leer num2;
+				resta(num1,num2);
+			3:
+				Escribir "multiplicación";
+				Escribir "Ingrese valor 1";
+				Leer num1;
+				Escribir "Ingrese valor 2";
+				Leer num2;
+				multiplicacion(num1,num2);
+			4:
+				Escribir "Division";
+				Escribir "Ingrese valor 1";
+				Leer num1;
+				Escribir "Ingrese valor 2";
+				Leer num2;
+				division(num1,num2);
+			De Otro Modo:
+				Escribir "Opción invalida";
+		FinSegun
+		
+	FinMientras
+	
+FinProceso
